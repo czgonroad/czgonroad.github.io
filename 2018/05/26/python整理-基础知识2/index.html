@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="title: python整理-基础知识2date: 2018-05-26 16:16:20 tags:python基础知识2&amp;gt;字典&amp;gt;&amp;gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.&amp;gt;&amp;gt;创建字典1、ex_dic={&amp;#39;zifuchuan&amp;#39;:123,1:123,&amp;#39;1&amp;#39;:">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如沐春风">
+<meta property="og:url" content="http://yoursite.com/2018/05/26/python整理-基础知识2/index.html">
+<meta property="og:site_name" content="如沐春风">
+<meta property="og:description" content="title: python整理-基础知识2date: 2018-05-26 16:16:20 tags:python基础知识2&amp;gt;字典&amp;gt;&amp;gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.&amp;gt;&amp;gt;创建字典1、ex_dic={&amp;#39;zifuchuan&amp;#39;:123,1:123,&amp;#39;1&amp;#39;:">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-26T09:32:52.386Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如沐春风">
+<meta name="twitter:description" content="title: python整理-基础知识2date: 2018-05-26 16:16:20 tags:python基础知识2&amp;gt;字典&amp;gt;&amp;gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.&amp;gt;&amp;gt;创建字典1、ex_dic={&amp;#39;zifuchuan&amp;#39;:123,1:123,&amp;#39;1&amp;#39;:">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/26/python整理-基础知识2/"/>
+
+
+
+
+
+  <title> | 如沐春风</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">如沐春风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">春风随行</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/26/python整理-基础知识2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chris">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如沐春风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T01:16:20-07:00">
+                2018-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>title: python整理-基础知识2<br>date: 2018-05-26 16:16:20</p>
+<h2 id="tags-python"><a href="#tags-python" class="headerlink" title="tags:python"></a>tags:python</h2><h3 id="基础知识2"><a href="#基础知识2" class="headerlink" title="基础知识2"></a>基础知识2</h3><h4 id="gt-字典"><a href="#gt-字典" class="headerlink" title="&gt;字典"></a>&gt;字典</h4><h5 id="gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取"><a href="#gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取" class="headerlink" title="&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取."></a>&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.</h5><h5 id="gt-gt-创建字典"><a href="#gt-gt-创建字典" class="headerlink" title="&gt;&gt;创建字典"></a>&gt;&gt;创建字典</h5><h6 id="1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39"><a href="#1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39" class="headerlink" title="1、ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}"></a>1、<code>ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}</code></h6><h6 id="2、-gt-gt-gt-seq-1-2-39-3-39"><a href="#2、-gt-gt-gt-seq-1-2-39-3-39" class="headerlink" title="2、&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)"></a>2、<code>&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)</code></h6><h6 id="—-gt-gt-gt-ex-dic-dict-fromkeys-seq"><a href="#—-gt-gt-gt-ex-dic-dict-fromkeys-seq" class="headerlink" title="—-&gt;&gt;&gt;ex_dic = dict.fromkeys(seq)"></a>—-<code>&gt;&gt;&gt;ex_dic = dict.fromkeys(seq)</code></h6><h6 id="—-gt-gt-gt-print-ex-dic"><a href="#—-gt-gt-gt-print-ex-dic" class="headerlink" title="—-&gt;&gt;&gt;print(ex_dic)"></a>—-<code>&gt;&gt;&gt;print(ex_dic)</code></h6><h6 id="—-1-None-2-None-39-3-39-None"><a href="#—-1-None-2-None-39-3-39-None" class="headerlink" title="—-{1: None, 2: None, &#39;3&#39;: None}"></a>—-<code>{1: None, 2: None, &#39;3&#39;: None}</code></h6><h6 id="gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组"><a href="#gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组" class="headerlink" title="&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组."></a>&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组.</h6><h5 id="gt-gt-修改字典"><a href="#gt-gt-修改字典" class="headerlink" title="&gt;&gt;修改字典"></a>&gt;&gt;修改字典</h5><h6 id="gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对"><a href="#gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对" class="headerlink" title="&gt;&gt;&gt;ex_dic[newkey]=newvalue #增加新的键/值对."></a>&gt;&gt;&gt;<code>ex_dic[newkey]=newvalue #增加新的键/值对.</code></h6><h6 id="gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值"><a href="#gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值" class="headerlink" title="&gt;&gt;&gt;ex_dic[oldkey]=newvalue #修改已有键的值."></a>&gt;&gt;&gt;<code>ex_dic[oldkey]=newvalue #修改已有键的值.</code></h6><h6 id="gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错"><a href="#gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错" class="headerlink" title="&gt;&gt;&gt;ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错."></a>&gt;&gt;&gt;<code>ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错.</code></h6><h6 id="gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错"><a href="#gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错" class="headerlink" title="&gt;&gt;&gt;ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错."></a>&gt;&gt;&gt;<code>ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错.</code></h6><h6 id="gt-gt-gt-ex-dic-clear-移除所有键值对"><a href="#gt-gt-gt-ex-dic-clear-移除所有键值对" class="headerlink" title="&gt;&gt;&gt;ex_dic.clear() #移除所有键值对."></a>&gt;&gt;&gt;<code>ex_dic.clear() #移除所有键值对.</code></h6><h5 id="gt-gt-查找字典键值对"><a href="#gt-gt-查找字典键值对" class="headerlink" title="&gt;&gt;查找字典键值对"></a>&gt;&gt;查找字典键值对</h5><h6 id="gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值"><a href="#gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值" class="headerlink" title="&gt;&gt;&gt;ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值."></a>&gt;&gt;&gt;<code>ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值.</code></h6><h6 id="gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组"><a href="#gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组" class="headerlink" title="&gt;&gt;&gt;ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组."></a>&gt;&gt;&gt;<code>ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组.</code></h6><h6 id="gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键"><a href="#gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键" class="headerlink" title="&gt;&gt;&gt;ex_lis.keys() #以列表返回一个字典所有键."></a>&gt;&gt;&gt;<code>ex_lis.keys() #以列表返回一个字典所有键.</code></h6><h6 id="gt-gt-gt-ex-lis-values-以列表返回字典所有的值"><a href="#gt-gt-gt-ex-lis-values-以列表返回字典所有的值" class="headerlink" title="&gt;&gt;&gt;ex_lis.values() #以列表返回字典所有的值."></a>&gt;&gt;&gt;<code>ex_lis.values() #以列表返回字典所有的值.</code></h6><h6 id="gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里"><a href="#gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里" class="headerlink" title="&gt;&gt;&gt;ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里."></a>&gt;&gt;&gt;<code>ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里.</code></h6>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/27/初次学习pythonnn整理/" rel="prev" title="初次学习python整理">
+                初次学习python整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Chris</p>
+              <p class="site-description motion-element" itemprop="description">记录正在发生的</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-python"><span class="nav-number">1.</span> <span class="nav-text">tags:python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础知识2"><span class="nav-number">1.1.</span> <span class="nav-text">基础知识2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gt-字典"><span class="nav-number">1.1.1.</span> <span class="nav-text">&gt;字典</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gt-gt-创建字典"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">&gt;&gt;创建字典</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39"><span class="nav-number">1.1.1.2.1.</span> <span class="nav-text">1、ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2、-gt-gt-gt-seq-1-2-39-3-39"><span class="nav-number">1.1.1.2.2.</span> <span class="nav-text">2、&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#—-gt-gt-gt-ex-dic-dict-fromkeys-seq"><span class="nav-number">1.1.1.2.3.</span> <span class="nav-text">—-&gt;&gt;&gt;ex_dic = dict.fromkeys(seq)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#—-gt-gt-gt-print-ex-dic"><span class="nav-number">1.1.1.2.4.</span> <span class="nav-text">—-&gt;&gt;&gt;print(ex_dic)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#—-1-None-2-None-39-3-39-None"><span class="nav-number">1.1.1.2.5.</span> <span class="nav-text">—-{1: None, 2: None, &#39;3&#39;: None}</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组"><span class="nav-number">1.1.1.2.6.</span> <span class="nav-text">&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组.</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gt-gt-修改字典"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">&gt;&gt;修改字典</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对"><span class="nav-number">1.1.1.3.1.</span> <span class="nav-text">&gt;&gt;&gt;ex_dic[newkey]=newvalue #增加新的键/值对.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值"><span class="nav-number">1.1.1.3.2.</span> <span class="nav-text">&gt;&gt;&gt;ex_dic[oldkey]=newvalue #修改已有键的值.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错"><span class="nav-number">1.1.1.3.3.</span> <span class="nav-text">&gt;&gt;&gt;ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错"><span class="nav-number">1.1.1.3.4.</span> <span class="nav-text">&gt;&gt;&gt;ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-dic-clear-移除所有键值对"><span class="nav-number">1.1.1.3.5.</span> <span class="nav-text">&gt;&gt;&gt;ex_dic.clear() #移除所有键值对.</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gt-gt-查找字典键值对"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">&gt;&gt;查找字典键值对</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值"><span class="nav-number">1.1.1.4.1.</span> <span class="nav-text">&gt;&gt;&gt;ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组"><span class="nav-number">1.1.1.4.2.</span> <span class="nav-text">&gt;&gt;&gt;ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键"><span class="nav-number">1.1.1.4.3.</span> <span class="nav-text">&gt;&gt;&gt;ex_lis.keys() #以列表返回一个字典所有键.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-lis-values-以列表返回字典所有的值"><span class="nav-number">1.1.1.4.4.</span> <span class="nav-text">&gt;&gt;&gt;ex_lis.values() #以列表返回字典所有的值.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里"><span class="nav-number">1.1.1.4.5.</span> <span class="nav-text">&gt;&gt;&gt;ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里.</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chris</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
