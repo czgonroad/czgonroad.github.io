@@ -233,6 +233,129 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/python整理-基础知识3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chris">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如沐春风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/27/python整理-基础知识3/" itemprop="url">python整理-基础知识3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T17:58:47-07:00">
+                2018-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>基础知识3</p>
+<h4 id="gt-for循环"><a href="#gt-for循环" class="headerlink" title="&gt;for循环"></a>&gt;for循环</h4><h5 id="gt-gt-Pythonfor循环可以遍历任何序列的项目，如一个列表或者一个字符串。"><a href="#gt-gt-Pythonfor循环可以遍历任何序列的项目，如一个列表或者一个字符串。" class="headerlink" title="&gt;&gt;Pythonfor循环可以遍历任何序列的项目，如一个列表或者一个字符串。"></a>&gt;&gt;Pythonfor循环可以遍历任何序列的项目，如一个列表或者一个字符串。</h5><h5 id="for-iterating-var-in-sequence"><a href="#for-iterating-var-in-sequence" class="headerlink" title="for iterating_var in sequence:"></a><code>for iterating_var in sequence:</code></h5><h5 id="emsp-emsp-statements-s"><a href="#emsp-emsp-statements-s" class="headerlink" title="&emsp;&emsp;statements(s)"></a>&emsp;&emsp;<code>statements(s)</code></h5><h5 id="gt-gt-流程图："><a href="#gt-gt-流程图：" class="headerlink" title="&gt;&gt;流程图："></a>&gt;&gt;流程图：</h5><p><img src="http://www.runoob.com/wp-content/uploads/2013/11/python_for_loop.jpg" alt="for循环流程图"></p>
+<h5 id="gt-gt-对序列元素遍历"><a href="#gt-gt-对序列元素遍历" class="headerlink" title="&gt;&gt;对序列元素遍历"></a>&gt;&gt;对序列元素遍历</h5><h6 id="gt-gt-gt-for-element-in-1-2-3"><a href="#gt-gt-gt-for-element-in-1-2-3" class="headerlink" title="&gt;&gt;&gt;for element in [1,2,3]:"></a><code>&gt;&gt;&gt;for element in [1,2,3]:</code></h6><h6 id="emsp-emsp-emsp-emsp-print-element"><a href="#emsp-emsp-emsp-emsp-print-element" class="headerlink" title="&emsp;&emsp;&emsp;&emsp;print(element)"></a>&emsp;&emsp;&emsp;&emsp;print(element)</h6><h6 id="gt-gt-gt-for-key-in-ex-dic-keys"><a href="#gt-gt-gt-for-key-in-ex-dic-keys" class="headerlink" title="&gt;&gt;&gt;for key in ex_dic.keys:"></a><code>&gt;&gt;&gt;for key in ex_dic.keys:</code></h6><h6 id="emsp-emsp-emsp-emsp-print-ex-dic-key"><a href="#emsp-emsp-emsp-emsp-print-ex-dic-key" class="headerlink" title="&emsp;&emsp;&emsp;&emsp;print(ex_dic[key])"></a>&emsp;&emsp;&emsp;&emsp;print(ex_dic[key])</h6><h5 id="gt-gt-对序列索引遍历"><a href="#gt-gt-对序列索引遍历" class="headerlink" title="&gt;&gt;对序列索引遍历"></a>&gt;&gt;对序列索引遍历</h5><h6 id="gt-gt-gt-for-index-in-range-len-ex-lis"><a href="#gt-gt-gt-for-index-in-range-len-ex-lis" class="headerlink" title="&gt;&gt;&gt;for index in range(len(ex_lis)):"></a><code>&gt;&gt;&gt;for index in range(len(ex_lis)):</code></h6><h6 id="emsp-emsp-emsp-emsp-print-ex-lis-index"><a href="#emsp-emsp-emsp-emsp-print-ex-lis-index" class="headerlink" title="&emsp;&emsp;&emsp;&emsp;print(ex_lis[index])"></a>&emsp;&emsp;&emsp;&emsp;print(ex_lis[index])</h6><h6 id="gt-gt-gt-for-index-in-range-len-str"><a href="#gt-gt-gt-for-index-in-range-len-str" class="headerlink" title="&gt;&gt;&gt;for index in range(len(str)):"></a><code>&gt;&gt;&gt;for index in range(len(str)):</code></h6><h6 id="emsp-emsp-emsp-emsp-print-str-index"><a href="#emsp-emsp-emsp-emsp-print-str-index" class="headerlink" title="&emsp;&emsp;&emsp;&emsp;print(str[index])"></a>&emsp;&emsp;&emsp;&emsp;print(str[index])</h6><h6 id="range-len-为python内置函数，range-len-seq-表示序列元素数量n，生成0到n-1的整数列表，步长默认为1"><a href="#range-len-为python内置函数，range-len-seq-表示序列元素数量n，生成0到n-1的整数列表，步长默认为1" class="headerlink" title="range(),len()为python内置函数，range(len(seq))表示序列元素数量n，生成0到n-1的整数列表，步长默认为1."></a><strong>range(),len()为python内置函数，range(len(seq))表示序列元素数量n，生成0到n-1的整数列表，步长默认为1.</strong></h6><h4 id="gt-while循环"><a href="#gt-while循环" class="headerlink" title="&gt;while循环"></a>&gt;while循环</h4><h5 id="gt-gt-while-语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为："><a href="#gt-gt-while-语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为：" class="headerlink" title="&gt;&gt;while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为："></a>&gt;&gt;while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为：</h5><h5 id="while-判断条件："><a href="#while-判断条件：" class="headerlink" title="while 判断条件："></a><code>while 判断条件：</code></h5><h5 id="emsp-emsp-emsp-emsp-执行语句……"><a href="#emsp-emsp-emsp-emsp-执行语句……" class="headerlink" title="&emsp;&emsp;&emsp;&emsp;执行语句……"></a>&emsp;&emsp;&emsp;&emsp;执行语句……</h5><h5 id="gt-gt-流程图：-1"><a href="#gt-gt-流程图：-1" class="headerlink" title="&gt;&gt;流程图："></a>&gt;&gt;流程图：</h5><p><img src="http://www.runoob.com/wp-content/uploads/2013/11/python_while_loop.jpg" alt="while循环流程图"></p>
+<h4 id="gt-gt-Gif-演示-Python-while-语句执行过程"><a href="#gt-gt-Gif-演示-Python-while-语句执行过程" class="headerlink" title="&gt;&gt;Gif 演示 Python while 语句执行过程"></a>&gt;&gt;Gif 演示 Python while 语句执行过程</h4><p><img src="http://www.runoob.com/wp-content/uploads/2013/11/loop-over-python-list-animation.gif" alt="while语句执行过程"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/初次学习pythonnn整理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -373,7 +496,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/26/python整理-基础知识2/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/05/26/python整理-基础知识2/" itemprop="url">python整理-基础知识2</a></h1>
         
 
         <div class="post-meta">
@@ -425,9 +548,7 @@
       
         
           
-            <hr>
-<p>title: python整理-基础知识2<br>date: 2018-05-26 16:16:20</p>
-<h2 id="tags-python"><a href="#tags-python" class="headerlink" title="tags:python"></a>tags:python</h2><h3 id="基础知识2"><a href="#基础知识2" class="headerlink" title="基础知识2"></a>基础知识2</h3><h4 id="gt-字典"><a href="#gt-字典" class="headerlink" title="&gt;字典"></a>&gt;字典</h4><h5 id="gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取"><a href="#gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取" class="headerlink" title="&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取."></a>&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.</h5><h5 id="gt-gt-创建字典"><a href="#gt-gt-创建字典" class="headerlink" title="&gt;&gt;创建字典"></a>&gt;&gt;创建字典</h5><h6 id="1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39"><a href="#1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39" class="headerlink" title="1、ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}"></a>1、<code>ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}</code></h6><h6 id="2、-gt-gt-gt-seq-1-2-39-3-39"><a href="#2、-gt-gt-gt-seq-1-2-39-3-39" class="headerlink" title="2、&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)"></a>2、<code>&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)</code></h6><h6 id="—-gt-gt-gt-ex-dic-dict-fromkeys-seq"><a href="#—-gt-gt-gt-ex-dic-dict-fromkeys-seq" class="headerlink" title="—-&gt;&gt;&gt;ex_dic = dict.fromkeys(seq)"></a>—-<code>&gt;&gt;&gt;ex_dic = dict.fromkeys(seq)</code></h6><h6 id="—-gt-gt-gt-print-ex-dic"><a href="#—-gt-gt-gt-print-ex-dic" class="headerlink" title="—-&gt;&gt;&gt;print(ex_dic)"></a>—-<code>&gt;&gt;&gt;print(ex_dic)</code></h6><h6 id="—-1-None-2-None-39-3-39-None"><a href="#—-1-None-2-None-39-3-39-None" class="headerlink" title="—-{1: None, 2: None, &#39;3&#39;: None}"></a>—-<code>{1: None, 2: None, &#39;3&#39;: None}</code></h6><h6 id="gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组"><a href="#gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组" class="headerlink" title="&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组."></a>&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组.</h6><h5 id="gt-gt-修改字典"><a href="#gt-gt-修改字典" class="headerlink" title="&gt;&gt;修改字典"></a>&gt;&gt;修改字典</h5><h6 id="gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对"><a href="#gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对" class="headerlink" title="&gt;&gt;&gt;ex_dic[newkey]=newvalue #增加新的键/值对."></a>&gt;&gt;&gt;<code>ex_dic[newkey]=newvalue #增加新的键/值对.</code></h6><h6 id="gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值"><a href="#gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值" class="headerlink" title="&gt;&gt;&gt;ex_dic[oldkey]=newvalue #修改已有键的值."></a>&gt;&gt;&gt;<code>ex_dic[oldkey]=newvalue #修改已有键的值.</code></h6><h6 id="gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错"><a href="#gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错" class="headerlink" title="&gt;&gt;&gt;ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错."></a>&gt;&gt;&gt;<code>ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错.</code></h6><h6 id="gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错"><a href="#gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错" class="headerlink" title="&gt;&gt;&gt;ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错."></a>&gt;&gt;&gt;<code>ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错.</code></h6><h6 id="gt-gt-gt-ex-dic-clear-移除所有键值对"><a href="#gt-gt-gt-ex-dic-clear-移除所有键值对" class="headerlink" title="&gt;&gt;&gt;ex_dic.clear() #移除所有键值对."></a>&gt;&gt;&gt;<code>ex_dic.clear() #移除所有键值对.</code></h6><h5 id="gt-gt-查找字典键值对"><a href="#gt-gt-查找字典键值对" class="headerlink" title="&gt;&gt;查找字典键值对"></a>&gt;&gt;查找字典键值对</h5><h6 id="gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值"><a href="#gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值" class="headerlink" title="&gt;&gt;&gt;ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值."></a>&gt;&gt;&gt;<code>ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值.</code></h6><h6 id="gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组"><a href="#gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组" class="headerlink" title="&gt;&gt;&gt;ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组."></a>&gt;&gt;&gt;<code>ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组.</code></h6><h6 id="gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键"><a href="#gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键" class="headerlink" title="&gt;&gt;&gt;ex_lis.keys() #以列表返回一个字典所有键."></a>&gt;&gt;&gt;<code>ex_lis.keys() #以列表返回一个字典所有键.</code></h6><h6 id="gt-gt-gt-ex-lis-values-以列表返回字典所有的值"><a href="#gt-gt-gt-ex-lis-values-以列表返回字典所有的值" class="headerlink" title="&gt;&gt;&gt;ex_lis.values() #以列表返回字典所有的值."></a>&gt;&gt;&gt;<code>ex_lis.values() #以列表返回字典所有的值.</code></h6><h6 id="gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里"><a href="#gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里" class="headerlink" title="&gt;&gt;&gt;ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里."></a>&gt;&gt;&gt;<code>ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里.</code></h6>
+            <h3 id="基础知识2"><a href="#基础知识2" class="headerlink" title="基础知识2"></a>基础知识2</h3><h4 id="gt-字典"><a href="#gt-字典" class="headerlink" title="&gt;字典"></a>&gt;字典</h4><h5 id="gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取"><a href="#gt-gt-列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取" class="headerlink" title="&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取."></a>&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.</h5><h5 id="gt-gt-创建字典"><a href="#gt-gt-创建字典" class="headerlink" title="&gt;&gt;创建字典"></a>&gt;&gt;创建字典</h5><h6 id="1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39"><a href="#1、ex-dic-39-zifuchuan-39-123-1-123-39-1-39-123-2-39-234-39" class="headerlink" title="1、ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}"></a>1、<code>ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}</code></h6><h6 id="2、-gt-gt-gt-seq-1-2-39-3-39"><a href="#2、-gt-gt-gt-seq-1-2-39-3-39" class="headerlink" title="2、&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)"></a>2、<code>&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)</code></h6><h6 id="—-gt-gt-gt-ex-dic-dict-fromkeys-seq，value-None"><a href="#—-gt-gt-gt-ex-dic-dict-fromkeys-seq，value-None" class="headerlink" title="—-&gt;&gt;&gt;ex_dic = dict.fromkeys(seq，value=None)"></a>—-<code>&gt;&gt;&gt;ex_dic = dict.fromkeys(seq，value=None)</code></h6><h6 id="—-gt-gt-gt-print-ex-dic"><a href="#—-gt-gt-gt-print-ex-dic" class="headerlink" title="—-&gt;&gt;&gt;print(ex_dic)"></a>—-<code>&gt;&gt;&gt;print(ex_dic)</code></h6><h6 id="—-1-None-2-None-39-3-39-None"><a href="#—-1-None-2-None-39-3-39-None" class="headerlink" title="—-{1: None, 2: None, &#39;3&#39;: None}"></a>—-<code>{1: None, 2: None, &#39;3&#39;: None}</code></h6><h6 id="gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组"><a href="#gt-gt-gt-键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组" class="headerlink" title="&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组."></a>&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组.</h6><h5 id="gt-gt-修改字典"><a href="#gt-gt-修改字典" class="headerlink" title="&gt;&gt;修改字典"></a>&gt;&gt;修改字典</h5><h6 id="gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对"><a href="#gt-gt-gt-ex-dic-newkey-newvalue-增加新的键-值对" class="headerlink" title="&gt;&gt;&gt;ex_dic[newkey]=newvalue #增加新的键/值对."></a>&gt;&gt;&gt;<code>ex_dic[newkey]=newvalue #增加新的键/值对.</code></h6><h6 id="gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值"><a href="#gt-gt-gt-ex-dic-oldkey-newvalue-修改已有键的值" class="headerlink" title="&gt;&gt;&gt;ex_dic[oldkey]=newvalue #修改已有键的值."></a>&gt;&gt;&gt;<code>ex_dic[oldkey]=newvalue #修改已有键的值.</code></h6><h6 id="gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错"><a href="#gt-gt-gt-ex-dic-pop-key-default-None-移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错" class="headerlink" title="&gt;&gt;&gt;ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错."></a>&gt;&gt;&gt;<code>ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错.</code></h6><h6 id="gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错"><a href="#gt-gt-gt-ex-dic-popitem-移除最后一对键值对，并以元组形式返回key和value-若字典空，则报错" class="headerlink" title="&gt;&gt;&gt;ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错."></a>&gt;&gt;&gt;<code>ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错.</code></h6><h6 id="gt-gt-gt-ex-dic-clear-移除所有键值对"><a href="#gt-gt-gt-ex-dic-clear-移除所有键值对" class="headerlink" title="&gt;&gt;&gt;ex_dic.clear() #移除所有键值对."></a>&gt;&gt;&gt;<code>ex_dic.clear() #移除所有键值对.</code></h6><h5 id="gt-gt-查找字典键值对"><a href="#gt-gt-查找字典键值对" class="headerlink" title="&gt;&gt;查找字典键值对"></a>&gt;&gt;查找字典键值对</h5><h6 id="gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值"><a href="#gt-gt-gt-ex-dic-get-key-default-None-返回指定键的值，如果值不在字典中返回default值" class="headerlink" title="&gt;&gt;&gt;ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值."></a>&gt;&gt;&gt;<code>ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值.</code></h6><h6 id="gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组"><a href="#gt-gt-gt-ex-lis-items-以列表返回可遍历的-键-值-元组数组" class="headerlink" title="&gt;&gt;&gt;ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组."></a>&gt;&gt;&gt;<code>ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组.</code></h6><h6 id="gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键"><a href="#gt-gt-gt-ex-lis-keys-以列表返回一个字典所有键" class="headerlink" title="&gt;&gt;&gt;ex_lis.keys() #以列表返回一个字典所有键."></a>&gt;&gt;&gt;<code>ex_lis.keys() #以列表返回一个字典所有键.</code></h6><h6 id="gt-gt-gt-ex-lis-values-以列表返回字典所有的值"><a href="#gt-gt-gt-ex-lis-values-以列表返回字典所有的值" class="headerlink" title="&gt;&gt;&gt;ex_lis.values() #以列表返回字典所有的值."></a>&gt;&gt;&gt;<code>ex_lis.values() #以列表返回字典所有的值.</code></h6><h6 id="gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里"><a href="#gt-gt-gt-ex-lis-update-dict2-把字典dict2的键-值对更新到ex-dict里" class="headerlink" title="&gt;&gt;&gt;ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里."></a>&gt;&gt;&gt;<code>ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里.</code></h6>
           
         
       
@@ -636,7 +757,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
