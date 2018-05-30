@@ -233,6 +233,265 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/格式化字符串用法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chris">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如沐春风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/31/格式化字符串用法/" itemprop="url">格式化字符串用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T13:39:44-07:00">
+                2018-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>python中字符串格式化方式除了%还有更广泛的format方式，简单易用.本文除了介绍format基本用法，还有其简化方式.</p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><h4 id="39-hello-0-39-format-39-world-39-引用第一个参数"><a href="#39-hello-0-39-format-39-world-39-引用第一个参数" class="headerlink" title="&#39;hello,{0}&#39;.format(&#39;world !&#39;) #引用第一个参数"></a><code>&#39;hello,{0}&#39;.format(&#39;world !&#39;) #引用第一个参数</code></h4><pre><code>输出`hello, world !`
+</code></pre><h4 id="39-is-cool-39-format-39-python-39-引用第一个参数"><a href="#39-is-cool-39-format-39-python-39-引用第一个参数" class="headerlink" title="&#39;{} is cool!&#39;.format(&#39;python&#39;) #引用第一个参数"></a><code>&#39;{} is cool!&#39;.format(&#39;python&#39;) #引用第一个参数</code></h4><pre><code>输出`python is cool!`
+</code></pre><h4 id="39-I-39-m-name-39-format-name-39-Chris-39-引用名为name的参数"><a href="#39-I-39-m-name-39-format-name-39-Chris-39-引用名为name的参数" class="headerlink" title="&#39;I\&#39;m {name}&#39;.format(name=&#39;Chris&#39;) #引用名为name的参数"></a><code>&#39;I\&#39;m {name}&#39;.format(name=&#39;Chris&#39;) #引用名为name的参数</code></h4><pre><code>输出`I&apos;m Chris`
+</code></pre><h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="39-Hey-name-a-39-format-name-quot-克瑞斯-quot-a把返回字符串中非ASCII编码的字符改为Unicode编码形式"><a href="#39-Hey-name-a-39-format-name-quot-克瑞斯-quot-a把返回字符串中非ASCII编码的字符改为Unicode编码形式" class="headerlink" title="&#39;Hey,{name!a}&#39;.format(name=&quot;克瑞斯&quot;) #!a把返回字符串中非ASCII编码的字符改为Unicode编码形式."></a><code>&#39;Hey,{name!a}&#39;.format(name=&quot;克瑞斯&quot;) #!a把返回字符串中非ASCII编码的字符改为Unicode编码形式.</code></h4><p>输出<code>&quot;Hey,&#39;\\u514b\\u745e\\u65af&#39;&quot;</code></p>
+<h4 id="39-Hey-name-s-39-format-name-quot-克瑞斯-quot-r返回字符串为str函数下形式，用户易读"><a href="#39-Hey-name-s-39-format-name-quot-克瑞斯-quot-r返回字符串为str函数下形式，用户易读" class="headerlink" title="&#39;Hey,{name!s}&#39;.format(name=&quot;克瑞斯&quot;) #!r返回字符串为str函数下形式，用户易读."></a><code>&#39;Hey,{name!s}&#39;.format(name=&quot;克瑞斯&quot;) #!r返回字符串为str函数下形式，用户易读.</code></h4><p>输出<code>&#39;Hey,克瑞斯&#39;</code></p>
+<h4 id="39-Hey-name-r-39-format-name-quot-克瑞斯-quot-r返回字符串为repr函数下形式，解释器易读"><a href="#39-Hey-name-r-39-format-name-quot-克瑞斯-quot-r返回字符串为repr函数下形式，解释器易读" class="headerlink" title="&#39;Hey,{name!r}&#39;.format(name=&quot;克瑞斯&quot;) #!r返回字符串为repr函数下形式，解释器易读."></a><code>&#39;Hey,{name!r}&#39;.format(name=&quot;克瑞斯&quot;) #!r返回字符串为repr函数下形式，解释器易读.</code></h4><p>输出<code>&quot;Hey,&#39;克瑞斯&#39;&quot;</code></p>
+<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><p>：后传入#加进制符号表示转为相应进制数.</p>
+<h4 id="39-0-in-HEX-is-0-x-39-format-16-转为十六进制"><a href="#39-0-in-HEX-is-0-x-39-format-16-转为十六进制" class="headerlink" title="&#39;{0} in HEX is {0:#x}&#39;.format(16) #转为十六进制"></a><code>&#39;{0} in HEX is {0:#x}&#39;.format(16) #转为十六进制</code></h4><p>输出<code>&#39;16 in HEX is 0x10&#39;</code></p>
+<h4 id="39-0-in-OCT-is-0-o-39-format-16-转为八进制"><a href="#39-0-in-OCT-is-0-o-39-format-16-转为八进制" class="headerlink" title="&#39;{0} in OCT is {0:#o}&#39;.format(16) #转为八进制"></a><code>&#39;{0} in OCT is {0:#o}&#39;.format(16) #转为八进制</code></h4><p>输出<code>&#39;16 in OCT is 0o20&#39;</code></p>
+<h3 id="对齐字符串"><a href="#对齐字符串" class="headerlink" title="对齐字符串"></a>对齐字符串</h3><p>:后传入整数，可以保证该域至少有这么多的宽度. 用于美化表格时很有用.<br>在：与整数之间添加&lt;、&gt;、^,表示左对齐、右对齐、居中.</p>
+<h4 id="39-10-39-format-100-整型默认右对齐"><a href="#39-10-39-format-100-整型默认右对齐" class="headerlink" title="&#39;{:10}&#39;.format(100) #整型默认右对齐"></a><code>&#39;{:10}&#39;.format(100) #整型默认右对齐</code></h4><p>输出<code>&#39;       100&#39;</code></p>
+<h4 id="39-lt-10-39-format-100-左对齐"><a href="#39-lt-10-39-format-100-左对齐" class="headerlink" title="&#39;{:&lt;10}&#39;.format(100) #左对齐"></a><code>&#39;{:&lt;10}&#39;.format(100) #左对齐</code></h4><p>输出<code>&#39;100       &#39;</code></p>
+<h4 id="39-10-39-format-39-100-39-字符串默认左对齐"><a href="#39-10-39-format-39-100-39-字符串默认左对齐" class="headerlink" title="&#39;{:10}&#39;.format(&#39;100&#39;) #字符串默认左对齐"></a><code>&#39;{:10}&#39;.format(&#39;100&#39;) #字符串默认左对齐</code></h4><p>输出<code>&#39;100       &#39;</code></p>
+<h4 id="39-gt-10-39-format-39-100-39-用-代替多余空间"><a href="#39-gt-10-39-format-39-100-39-用-代替多余空间" class="headerlink" title="&#39;{:_&gt;10}&#39;.format(&#39;100&#39;) #用_代替多余空间"></a><code>&#39;{:_&gt;10}&#39;.format(&#39;100&#39;) #用_代替多余空间</code></h4><p>输出<code>&#39;_______100&#39;</code></p>
+<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3><h4 id="39-3-39-format-1-3-39-可用于浮点数保留几位小数"><a href="#39-3-39-format-1-3-39-可用于浮点数保留几位小数" class="headerlink" title="&#39;{:.3}&#39;.format(1/3)&#39; #可用于浮点数保留几位小数"></a><code>&#39;{:.3}&#39;.format(1/3)&#39; #可用于浮点数保留几位小数</code></h4><p>输出<code>&#39;0.333&#39;</code></p>
+<h4 id="39-3-39-format-39-Have-a-good-day-39-39-对于字符串截取前几位字符"><a href="#39-3-39-format-39-Have-a-good-day-39-39-对于字符串截取前几位字符" class="headerlink" title="&#39;{:.3}&#39;.format(&#39;Have a good day!&#39;)&#39; #对于字符串截取前几位字符"></a><code>&#39;{:.3}&#39;.format(&#39;Have a good day!&#39;)&#39; #对于字符串截取前几位字符</code></h4><p>输出<code>&#39;Hav&#39;</code></p>
+<h3 id="时间格式化"><a href="#时间格式化" class="headerlink" title="时间格式化"></a>时间格式化</h3><p><code>from datetime import datetime</code><br><code>&#39;{:%Y-%m-%d %H:%M}&#39;.format(datetime(2018,5,30,15,00))</code><br>输出<code>&#39;2018-05-30 15:00&#39;</code></p>
+<h3 id="参数指定格式"><a href="#参数指定格式" class="headerlink" title="参数指定格式"></a>参数指定格式</h3><p><code>&#39;{:{char}{align}{width}}&#39;.format(&#39;test&#39;,char=&#39;_&#39;,align=&#39;^&#39;,width=&#39;10&#39;)</code><br>输出<code>&#39;___test___&#39;</code></p>
+<h4 id="from-datetime-import-datetime"><a href="#from-datetime-import-datetime" class="headerlink" title="from datetime import datetime"></a><code>from datetime import datetime</code></h4><p><code>dt=datetime(2018,5,30,15,0)</code><br><code>&#39;{:{dfmt} {tfmt}}&#39;.format(dt,dfmt=&#39;%Y-%m-%d&#39;,tfmt=&#39;%H:%M&#39;)</code><br>输出<code>&#39;2018-05-30 15:00&#39;</code></p>
+<hr>
+<h3 id="简化用法"><a href="#简化用法" class="headerlink" title="简化用法"></a><strong>简化用法</strong></h3><h4 id="‘-’-format-f’-’"><a href="#‘-’-format-f’-’" class="headerlink" title="‘{  }’.format( )  ==  f’{  }’"></a>‘{  }’.format( )  ==  f’{  }’</h4><h4 id="f-quot-hello-39-world-39-quot-输出-39-hello，world-39"><a href="#f-quot-hello-39-world-39-quot-输出-39-hello，world-39" class="headerlink" title="f&quot;hello,{&#39;world!&#39;}&quot; #输出 &#39;hello，world!&#39;"></a><code>f&quot;hello,{&#39;world!&#39;}&quot; #输出 &#39;hello，world!&#39;</code></h4><h4 id="f-quot-1-3-3-quot-输出-39-0-333-39"><a href="#f-quot-1-3-3-quot-输出-39-0-333-39" class="headerlink" title="f&quot;{1/3:.3}&quot; #输出 &#39;0.333&#39;"></a><code>f&quot;{1/3:.3}&quot; #输出 &#39;0.333&#39;</code></h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/python整理-模块学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chris">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如沐春风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/27/python整理-模块学习/" itemprop="url">python整理-模块学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T22:03:20-07:00">
+                2018-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/picture储存到githuub生成url/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1000,7 +1259,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
