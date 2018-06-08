@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[等风来]]></title>
+    <url>%2F2018%2F06%2F06%2F%E7%AD%89%E9%A3%8E%E6%9D%A5%2F</url>
+    <content type="text"><![CDATA[阳台上的豆角长出来了，撒种子那几天一直关注也没什么变化，忽然就盎然起来，这肯定少不了我妈不断地浇水，而我只是旁观。前两天看娃的时候，她要从床上下去，我在床边蹲护着，她用小脚丫尝试找支撑，试了几次都触碰不了地面，扭头把手伸向我，我后退了一步，她见状继续用脚试探，慢慢踩到了床垫与床板间的错位面，靠着这个支撑另一脚往下挪，因为支撑面太狭长，一下滑下来了，我扶住她，她开始嘎嘎笑起来，忽然发现她已经比我蹲着还高了，我又成为了旁观者，后知后觉一切的变化。一直认为人生是体验式的，见多识广、阅历丰富才不枉走一遭，可是所谓的体验并不是到此一游、过眼云烟，是可以挖出果实的，一本书有人看完十本书的内容，有人目录也记不清了，在乎身边的每一件小事，每一个人，你会发现生活是丰富的，是有趣的。不用心很简单，在乎才需要勇气。]]></content>
+      <tags>
+        <tag>随记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[商务与经济统计第二章Pelican商店习题]]></title>
+    <url>%2F2018%2F06%2F06%2F%E5%95%86%E5%8A%A1%E4%B8%8E%E7%BB%8F%E6%B5%8E%E7%BB%9F%E8%AE%A1%E7%AC%AC%E4%BA%8C%E7%AB%A0Pelican%E5%95%86%E5%BA%97%2F%E5%95%86%E5%8A%A1%E4%B8%8E%E7%BB%8F%E6%B5%8E%E7%BB%9F%E8%AE%A1%E7%AC%AC%E4%BA%8C%E7%AB%A0Pelican%E5%95%86%E5%BA%97%2F</url>
+    <content type="text"><![CDATA[1234567import numpy as npimport pandas as pdpd.options.display.max_rows = 10import matplotlib.pyplot as pltplt.rcParams['font.sans-serif'] = ['SimHei'] #设置中文字体，防止绘图标签乱码plt.rcParams['axes.unicode_minus'] = False #用来正常显示负号%matplotlib inline 12IO = r'../商务与经济统计/商务与经济统计/数据文件/第2章/PelicanStores.csv'data = pd.read_csv(open(IO)) 1data.sample(3) #随机显示三行数据 123data = data.rename(columns=&#123;'Customer':'顾客','Type of Customer':'顾客类型'&#125;) #列名转换data.顾客类型 = data['顾客类型'].map(&#123;'Regular':'普通','Promotional':'促销'&#125;) #列内数据转换data.Gender = data['Gender'].map(&#123;'Male':'男人','Female':'女人'&#125;) #列内数据转换 1data.head() 123456789#pandas plot方法绘图nums = data.顾客类型.value_counts()def percent(n,sum_num): return int(n*100/sum_num)num_s = nums.apply(percent,args=(nums.sum(),))cus_ax = num_s.plot(kind='bar',title='顾客类型分布',alpha=0.5,edgecolor = 'k',rot = 0)cus_ax.set_xlabel('顾客类型') #设置x轴标签cus_ax.set_ylabel('数量百分比') #设置y轴标签cus_ax.set_yticklabels(['0%','10%','20%','30%','40%','50%','60%','70%']) 1grouped = data['Items'].groupby(data['Method of Payment']) 1234#pandas plot方法绘图pay_ax = grouped.sum().plot(kind='bar',title='付款方式与购买数量',alpha =0.5,edgecolor = 'k',rot=0)pay_ax.set_xlabel('支付方式')pay_ax.set_ylabel('数量') 1data['Net Sales'].max()-data['Net Sales'].min() 274.35999999999996 123bins = [0,30,60,90,120,150,180,210,240,270,300]data['profitdis'] = pd.cut(data['Net Sales'],bins).astype(str)profit= pd.crosstab(data.顾客类型,data['profitdis'],margins=True) 1profit=profit[['(0, 30]','(30, 60]','(60, 90]','(90, 120]','(120, 150]','(150, 180]','(180, 210]','(210, 240]','(240, 270]','(270, 300]','All']] 1profit 交叉分组表分析顾客类型相似性与差异性：相似性：人数与净销售额相关性相似.差异性：1、总人数中，促销人数占比70%.&emsp;&emsp;&emsp;&emsp;2、以90美元为分界点，P(Net Sales P(Net Sales&lt;90 促销顾客占总促销顾客人数)&emsp;&emsp;&emsp;&emsp;&emsp;P(Net Sales&gt;90 普通顾客占总普通顾客人数) &lt; P(Net Sales&gt;90 促销顾客占总促销顾客人数)123456#matplotlib方法绘散点图scatter_ax1 = plt.scatter(data['Net Sales'],data['Age'],s=40,c='g',alpha=0.5,marker=r'$\clubsuit$',label='luck')plt.title('净销售额与年龄散点图')plt.xlabel('净销售额')plt.ylabel('年龄')plt.legend(loc=1) #标签位置 将图以净销售额100和年龄50为轴线划分为四部分，数据集中在左下部分，净销售额与年龄存在一定相关性.]]></content>
+      <tags>
+        <tag>统计学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[商务与经济统计第一、二章总结]]></title>
+    <url>%2F2018%2F06%2F05%2F%E5%95%86%E5%8A%A1%E4%B8%8E%E7%BB%8F%E6%B5%8E%E7%BB%9F%E8%AE%A1%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>统计学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[格式化字符串用法]]></title>
+    <url>%2F2018%2F05%2F31%2F%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[python中字符串格式化方式除了%还有更广泛的format方式，简单易用.本文除了介绍format基本用法，还有其简化方式. 基本用法&#39;hello,{0}&#39;.format(&#39;world !&#39;) #引用第一个参数输出&#39;hello, world !&#39; &#39;{} is cool!&#39;.format(&#39;python&#39;) #引用第一个参数输出&#39;python is cool!&#39; &#39;I\&#39;m {name}&#39;.format(name=&#39;Chris&#39;) #引用名为name的参数输出&#39;I&#39;m Chris&#39; 类型转换&#39;Hey,{name!a}&#39;.format(name=&quot;克瑞斯&quot;) #!a把返回字符串中非ASCII编码的字符改为Unicode编码形式.输出&quot;Hey,&#39;\\u514b\\u745e\\u65af&#39;&quot; &#39;Hey,{name!s}&#39;.format(name=&quot;克瑞斯&quot;) #!r返回字符串为str函数下形式，用户易读.输出&#39;Hey,克瑞斯&#39; &#39;Hey,{name!r}&#39;.format(name=&quot;克瑞斯&quot;) #!r返回字符串为repr函数下形式，解释器易读.输出&quot;Hey,&#39;克瑞斯&#39;&quot; 进制转换：后传入#加进制符号表示转为相应进制数. &#39;{0} in HEX is {0:#x}&#39;.format(16) #转为十六进制输出&#39;16 in HEX is 0x10&#39; &#39;{0} in OCT is {0:#o}&#39;.format(16) #转为八进制输出&#39;16 in OCT is 0o20&#39; 对齐字符串:后传入整数，可以保证该域至少有这么多的宽度. 用于美化表格时很有用.在：与整数之间添加&lt;、&gt;、^,表示左对齐、右对齐、居中. &#39;{:10}&#39;.format(100) #整型默认右对齐输出&#39; 100&#39; &#39;{:&lt;10}&#39;.format(100) #左对齐输出&#39;100 &#39; &#39;{:10}&#39;.format(&#39;100&#39;) #字符串默认左对齐输出&#39;100 &#39; &#39;{:_&gt;10}&#39;.format(&#39;100&#39;) #用_代替多余空间输出&#39;_______100&#39; 截取字符串&#39;{:.3}&#39;.format(1/3)&#39; #可用于浮点数保留几位小数输出&#39;0.333&#39; &#39;{:.3}&#39;.format(&#39;Have a good day!&#39;)&#39; #对于字符串截取前几位字符输出&#39;Hav&#39; 时间格式化from datetime import datetime&#39;{:%Y-%m-%d %H:%M}&#39;.format(datetime(2018,5,30,15,00))输出&#39;2018-05-30 15:00&#39; 参数指定格式&#39;{:{char}{align}{width}}&#39;.format(&#39;test&#39;,char=&#39;_&#39;,align=&#39;^&#39;,width=&#39;10&#39;)输出&#39;___test___&#39; from datetime import datetimedt=datetime(2018,5,30,15,0)&#39;{:{dfmt} {tfmt}}&#39;.format(dt,dfmt=&#39;%Y-%m-%d&#39;,tfmt=&#39;%H:%M&#39;)输出&#39;2018-05-30 15:00&#39; 简化用法‘{ }’.format( ) == f’{ }’f&quot;hello,{&#39;world!&#39;}&quot; #输出 &#39;hello，world!&#39;f&quot;{1/3:.3}&quot; #输出 &#39;0.333&#39;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[python整理-模块学习]]></title>
+    <url>%2F2018%2F05%2F27%2Fpython%E6%95%B4%E7%90%86-%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[picture储存到githuub生成url]]></title>
+    <url>%2F2018%2F05%2F27%2Fpicture%E5%82%A8%E5%AD%98%E5%88%B0githuub%E7%94%9F%E6%88%90url%2F</url>
+    <content type="text"><![CDATA[windows下的使用 【第一步】新建github仓库在github首页右上角，点击 + 图标，再选择New repository. 进入新建仓库的界面 填好之后，点Create repository就行了.【第二步】克隆仓库创建存放git仓库文件夹按住shirft+右键，选择Git Bush Here. 在命令窗口输入：git clone https://github.com/czgonroad/Markdown-Photos.git#所建仓库地址.等待完成后，在生成的文件夹下建立用于存放上传文件的文件夹，并把文件复制进去.【第三步】上传仓库文件在之前打开的命令窗口继续输入：1.git init #创建.git文件夹2.git add . #将改动添加到暂存区3.git commit -m &#39;first_commit&#39; #提交说明4.git remote add origin https://github.com/czgonroad/Markdown-Photos.git5.git push origin master #将本地更改推送到远程master分支如果执行第4步出现错误，则执行以下语句：git remote rm origin再继续执行第4步、第5步.若出现以下错误： 执行git pull origin master --allow-unrelated-histories若出现以下情况： 按键盘左上角”Esc”，输入:wq,注意是冒号+wq,按回车键即可. 出现上图情况后，继续执行git push origin master.前三步就是先把远程服务器github上面的文件拉先来，再push上去。【第四步】获取url链接打开github所建仓库，找到文件夹内图片点开.右上点击Download，在打开的图片上右键，选择复制图片地址即可.]]></content>
+      <tags>
+        <tag>picture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python整理-python组成]]></title>
+    <url>%2F2018%2F05%2F27%2Fpython%E6%95%B4%E7%90%86-python%E7%BB%84%E6%88%90%2F</url>
+    <content type="text"><![CDATA[python 一个程序的总装车间]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python整理-基础知识3]]></title>
+    <url>%2F2018%2F05%2F27%2Fpython%E6%95%B4%E7%90%86-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%863%2F</url>
+    <content type="text"><![CDATA[基础知识3 &gt;for循环&gt;&gt;Pythonfor循环可以遍历任何序列的项目，如一个列表或者一个字符串。for iterating_var in sequence:&emsp;&emsp;statements(s)&gt;&gt;流程图： &gt;&gt;对序列元素遍历&gt;&gt;&gt;for element in [1,2,3]:&emsp;&emsp;&emsp;&emsp;print(element)&gt;&gt;&gt;for key in ex_dic.keys:&emsp;&emsp;&emsp;&emsp;print(ex_dic[key])&gt;&gt;对序列索引遍历&gt;&gt;&gt;for index in range(len(ex_lis)):&emsp;&emsp;&emsp;&emsp;print(ex_lis[index])&gt;&gt;&gt;for index in range(len(str)):&emsp;&emsp;&emsp;&emsp;print(str[index])range(),len()为python内置函数，range(len(seq))表示序列元素数量n，生成0到n-1的整数列表，步长默认为1.&gt;while循环&gt;&gt;while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为：while 判断条件：&emsp;&emsp;&emsp;&emsp;执行语句……&gt;&gt;流程图： &gt;&gt;Gif 演示 Python while 语句执行过程]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[初次学习python整理]]></title>
+    <url>%2F2018%2F05%2F27%2F%E5%88%9D%E6%AC%A1%E5%AD%A6%E4%B9%A0pythonnn%E6%95%B4%E7%90%86%2F</url>
+    <content type="text"><![CDATA[机械转行大军一员，初步学习路线为python数据爬取、数据分析、数据库、flask。本次整理包括四个方面：基础知识、python组成、模块学习、爬虫项目。 基础知识1、四格缩进区分层次关系。2、基本数据类型：整型、浮点型、字符串、布尔型。3、容器：列表、元组、字典、集合。容器是复合数据类型。容器可包含0或多个python类型数据（基本数据类型+其他数据类型）。 4、列表 class list([iterable])①建立列表a、用方括号括起来，并且用逗号分隔，成员的类型可以是不一样的，但一般是一种类型。 如：ex_lis =[1,2,3]b、list()创建空列表，括号内加入iterable可迭代对象。如list((3,5,6)) 输出: [3,5,6]c、[ x for x in range(3)] #[ x for x in iterable]输出：[0,1,2]②增加元素a、ex_lis.append(obj) 在列表末尾添加新的对象(对象作为整体添加)。b、ex_lis.extend(seq) 在列表末尾按顺序逐个appending序列中所有值。C、ex_lis.insert(index, obj) 将对象插入列表,index索引，obj插入对象。③删除元素a、list.pop(index) 移除列表中的一个元素(默认最后一个元素)，并且返回该索引对应的值。b、list.remove(obj) 移除列表中某个值的第一个匹配项c、del list[index] 删除列表索引对应对象d、list.clear() 移除列表所有对象④改变列表元素a、list.sort(key=None, reverse=False)sort函数是序列的内部函数，原地排序，也就是使用后并不是返回一个有序的序列副本，而是把当前序列变得有序;sorted函数是python的内建函数，他接受一个序列，返回有序的副本，与sort的唯一区别就是会返回副本。b、list.reverse() 反向列表中元素，倒转c、ex_lis[1] = “此对象替换列表索引为1的对象”。⑤查找列表元素a、list.index(obj) 从列表中找出某个值第一个匹配项的索引位置，索引从0开始b、list[index] 获取列表中索引对应元素⑥了解列表元素a、len(list) 列表元素数量b、list.count(obj) 统计某个元素在列表中出现的次数列表的切片操作可直接学习python序列切片操作]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python整理-基础知识2]]></title>
+    <url>%2F2018%2F05%2F26%2Fpython%E6%95%B4%E7%90%86-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862%2F</url>
+    <content type="text"><![CDATA[基础知识2&gt;字典&gt;&gt;列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取.&gt;&gt;创建字典1、ex_dic={&#39;zifuchuan&#39;:123,1:123,&#39;1&#39;:123,2:&#39;234&#39;}2、&gt;&gt;&gt;seq=(1,2,&#39;3&#39;)—-&gt;&gt;&gt;ex_dic = dict.fromkeys(seq，value=None)—-&gt;&gt;&gt;print(ex_dic)—-{1: None, 2: None, &#39;3&#39;: None}&gt;&gt;&gt;键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数或元组.&gt;&gt;修改字典&gt;&gt;&gt;ex_dic[newkey]=newvalue #增加新的键/值对.&gt;&gt;&gt;ex_dic[oldkey]=newvalue #修改已有键的值.&gt;&gt;&gt;ex_dic.pop(key,default=None) #移除key对应键值对，并返回value；若未指定key，也未修改默认值，则报错.&gt;&gt;&gt;ex_dic.popitem() #移除最后一对键值对，并以元组形式返回key和value,若字典空，则报错.&gt;&gt;&gt;ex_dic.clear() #移除所有键值对.&gt;&gt;查找字典键值对&gt;&gt;&gt;ex_dic.get(key, default=None) #返回指定键的值，如果值不在字典中返回default值.&gt;&gt;&gt;ex_lis.items() #以列表返回可遍历的(键, 值) 元组数组.&gt;&gt;&gt;ex_lis.keys() #以列表返回一个字典所有键.&gt;&gt;&gt;ex_lis.values() #以列表返回字典所有的值.&gt;&gt;&gt;ex_lis.update(dict2) 把字典dict2的键/值对更新到ex_dict里.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F05%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
