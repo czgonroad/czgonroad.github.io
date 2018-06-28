@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MySQL学习-总结1]]></title>
+    <url>%2F2018%2F06%2F29%2FMySQL%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[数据库命令创建:create database 数据库名 charset=utf8;删除:drop database 数据库名;查看:show databases;使用:use 数据库名; 表命令创建:create table 表名 (列…);唯一标识的要求：id&emsp;&emsp;&emsp;&emsp;&emsp;类型:int unsigned&emsp;&emsp;&emsp;&emsp;&emsp;约束1:not null&emsp;&emsp;&emsp;&emsp;&emsp;约束2:primary key&emsp;&emsp;&emsp;&emsp;&emsp;约束3:auto_increment列的格式:列的名称 类型 约束create table stu( -&gt; id not null primary key auto_increment, -&gt; name varchar(10) not null, -&gt; gender bit default 1, -&gt; birthday datetime, -&gt; isDelete bit default 0, -&gt; ); 查看表 show tables;查看表结构 desc 表名;修改表: alter table 表名 all | modify | drop 列名 类型 约束;alter table students modify column isDelete bit not null default 0; 删除表: drop table 表名; 数据命令添加数据:insert into 表名(列名) values(值),(值)…;修改数据:update 表名 set 列1=值1，… where …;删除数据:delete from 表名 where …;逻辑删除:update …;备份:mysqldump -uroot -p 老数据库名 &gt; d:\bak.sql恢复:mysql -uroot -p 新数据库名 &lt; d:\bak.sqluse 新数据库名; source d:\bak.sql;]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[等风来]]></title>
     <url>%2F2018%2F06%2F06%2F%E7%AD%89%E9%A3%8E%E6%9D%A5%2F</url>
     <content type="text"><![CDATA[阳台上的豆角长出来了，撒种子那几天一直关注也没什么变化，忽然就盎然起来，这肯定少不了我妈不断地浇水，而我只是旁观。前两天看娃的时候，她要从床上下去，我在床边蹲护着，她用小脚丫尝试找支撑，试了几次都触碰不了地面，扭头把手伸向我，我后退了一步，她见状继续用脚试探，慢慢踩到了床垫与床板间的错位面，靠着这个支撑另一脚往下挪，因为支撑面太狭长，一下滑下来了，我扶住她，她开始嘎嘎笑起来，忽然发现她已经比我蹲着还高了，我又成为了旁观者，后知后觉一切的变化。一直认为人生是体验式的，见多识广、阅历丰富才不枉走一遭，可是所谓的体验并不是到此一游、过眼云烟，是可以挖出果实的，一本书有人看完十本书的内容，有人目录也记不清了，在乎身边的每一件小事，每一个人，你会发现生活是丰富的，是有趣的。不用心很简单，在乎才需要勇气。]]></content>
